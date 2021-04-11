@@ -1,10 +1,12 @@
 # Longhand
 A parser for longhand strings.
 
-### Installation
-`$ go get github.com/christianraza/longhand`
+## Installation
+```
+$ go get github.com/christianraza/longhand
+```
 
-### Usage
+## Usage
 ```
 package main
 
@@ -29,7 +31,7 @@ func main() {
 }
 ```
 
-### Supported Styles
+## Supported Styles
 ##### Standard
 `Five thousand two hundred and thirty-three` = `5233`
 ##### Years
@@ -39,18 +41,18 @@ func main() {
 ##### Notes on style
 What all this means is that something like `nineteen thirty thirty hundred` is valid input and will be parsed as `19303000`. `nineteen thirty thirty hundred` is not a common way of writing `19303000` but it is a possibility. So this, as well as many other variations, are supported styles.
 
-### "Valid" Longhand
+## "Valid" Longhand
 ##### Examples of valid longhand
-`Three` as opposed to `3`
-`Thirty-three` as opposed to `33`
+`Three` as opposed to `3`  
+`Thirty-three` as opposed to `33`  
 `Three hundred and thirty-three` as opposed to `333`
 ##### Examples of invalid longhand
-`Thre` as opposed to `Three` 
-`Thirty_three` as opposed to `Thirty-three`
+`Thre` as opposed to `Three`  
+`Thirty_three` as opposed to `Thirty-three`  
 `3 hundred and thirty-three` as opposed to `Three hundred and thirty-three`
 ##### Consequences of invalid longhand
-There are dire dire consequences for invalid longhand!
-:fearful: ...
+There are dire dire consequences for invalid longhand!  
+:fearful: ...  
 Just kidding :smile: invalid longhand just returns zero and an error.
 ##### "Valid"?
 You likely noticed the quotes around valid in the title of this section, that's because the way people interpret numerals sometimes depends on location and preference. I'm hard pressed to say that there is a valid way of arranging numerals, and some of this can be seen in the section on styles. I had to make compromises here and there, as is usual when writing tools or software, but generally these functions should do something reasonable so have fun! :smiley:
