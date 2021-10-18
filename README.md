@@ -1,4 +1,5 @@
 # Longhand
+A parser for longhand strings.
 
 ### Installation
 `$ go get github.com/christianraza/longhand`
